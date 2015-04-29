@@ -7,14 +7,16 @@ end
 post '/urls' do
   url = params[:url]
   short_url = Url.shorten_it(params[:url])
-  Url.create(url: url, short_url: short_url)
+  Url.create(url: url, short_url: short_url, click_count: 0)
   redirect '/'
 end
 
 get '/:short_url' do
-  short_url = Url.find(params[:short_url])
-  puts "#{short_url.inspect}"
-  redirect "#{short_url.url}"
+  url = Url.find(params[:short_url])
+  url.click_count += 1
+  url.save
+
+  redirect "#{url.url}"
 end
 
 
