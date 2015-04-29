@@ -39,6 +39,8 @@ end
 
 
 # Set up the controllers and helpers
+require APP_ROOT.join('app/controllers/sessions')
+require APP_ROOT.join('app/controllers/index')
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 

@@ -11,6 +11,7 @@ post '/urls' do
   redirect '/'
 end
 
+#redirection
 get '/:short_url' do
   url = Url.find(params[:short_url])
   url.click_count += 1
@@ -18,6 +19,4 @@ get '/:short_url' do
 
   redirect "#{url.url}"
 end
-
-
 
