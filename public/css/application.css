@@ -7,3 +7,19 @@
 th {
   text-align: left;
 }
+
+table {
+    width: 50%;
+}
+
+th {
+    height: 40px;
+}
+
+th {
+    text-align: left;
+}
+
+table, th, td {
+    border: 0px solid black;
+}
