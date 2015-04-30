@@ -7,7 +7,11 @@ end
 post '/urls' do
   url = params[:url]
   short_url = Url.shorten_it(params[:url])
-  Url.create(url: url, short_url: short_url, click_count: 0)
+  user_id = session[:user_id]
+  Url.create(url: url,
+             short_url: short_url,
+             click_count: 0,
+             user_id: user_id)
   redirect '/'
 end
 

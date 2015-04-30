@@ -4,7 +4,6 @@ helpers do
   end
 
   def logout!
-    # session[:user_id] = nil
     session.clear
   end
 

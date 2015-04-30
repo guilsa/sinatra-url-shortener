@@ -15,6 +15,7 @@
     <th>original url</th>
     <th>shortened url</th>
     <th>click count</th>
+    <th>user</th>
   </tr>
     <td><%=url.url%></td>
 
@@ -22,6 +23,7 @@
       <a href="<%="http://#{request.host_with_port}/#{url.short_url}"%>"><%="#{request.host_with_port}/#{url.short_url}"%></a>
       </td>
     <td><%=url.click_count%></td>
+    <td><%=url.user_id%></td>
   </tr>
 <% end %>
 </table>

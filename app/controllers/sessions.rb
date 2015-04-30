@@ -5,15 +5,10 @@ get '/login' do
 end
 
 post '/login' do
-  @password = params[:password]
-  "Welcome, you're logged in!"
-end
-
-post '/login' do
-  user = User.where(email: params[:email]).first
+  user = User.where(name: params[:email]).first
   if user && user.password == params[:password]
     login(user)
-    rediret to('/')
+    redirect to('/')
   else
     @login_failed = true
     erb :login
@@ -21,5 +16,6 @@ post '/login' do
 end
 
 get '/logout' do
-
+  logout!
+ erb :logout
 end
