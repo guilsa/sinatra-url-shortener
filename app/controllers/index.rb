@@ -20,3 +20,8 @@ get '/:short_url' do
   redirect "#{url.url}"
 end
 
+
+
+#how do i find out who you are
+#how do I find out whether u are logged in?
+#what does password mean?
