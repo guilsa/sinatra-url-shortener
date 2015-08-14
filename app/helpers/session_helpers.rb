@@ -17,10 +17,3 @@ helpers do
     end
   end
 end
-
-
-=begin
-
-
-
-=end

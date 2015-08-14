@@ -1,7 +1,6 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  # Remember to create a migration!
 
   has_many :Urls
 
@@ -16,7 +15,3 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 end
-
-
-# #
-# BCrypt::Password.create('magicpanda').to_s

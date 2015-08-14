@@ -1,5 +1,9 @@
+#Things to keep in mind:
+  # - how do i find out who you are
+  # - how do I find out whether u are logged in?
+  # - what does password mean?
+
 get '/' do
-  # Look in app/views/index.erb
   @url = Url.all
   erb :index
 end
@@ -20,12 +24,5 @@ get '/:short_url' do
   url = Url.find(params[:short_url])
   url.click_count += 1
   url.save
-
   redirect "#{url.url}"
 end
-
-
-
-#how do i find out who you are
-#how do I find out whether u are logged in?
-#what does password mean?
