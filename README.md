@@ -1,6 +1,14 @@
 # Sinatra Url Shortener
 
-## Features
+Basic url-shortner MVC application using Sinatra controllers with session enabled and session helper methods, User and Url data models importing from ActiveRecord::Base, an ugly View layer to add, index and login/logout, and BCrypt for password encrypting that overrides the #password getter and setter methods to either write to the database or evaluate whether the password matches what's stored.
+
+# How to install
+
+`bundle install`
+
+
+
+## List of ideas for new features
 
 User:
 
